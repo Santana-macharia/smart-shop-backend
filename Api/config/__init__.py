@@ -1,0 +1,2 @@
+Import pymysql
+Pymysql.install_as_MYSLDB
