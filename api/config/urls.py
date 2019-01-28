@@ -11,7 +11,7 @@ from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'auth/', include(('rest_auth.urls', 'rest_auth'), namespace='rest_auth')),
-    # path(r'users/', include('api.users.urls', namespace='users')),
+    path(r'users/', include('api.users.urls', namespace='users')),
     path(r'projects/', include('api.projects.urls', namespace='projects')),
     # path(r'loader/', include('api.loader.urls', namespace='loader')),
     # path(r'regressor/', include('api.regressor.urls', namespace='regressor')),

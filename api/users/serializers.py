@@ -103,37 +103,7 @@ class GroupDetailSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
         fields = '__all__'
 
 
-class UserLocationSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
-
-    class Meta:
-        model = UserLocation
-        fields = '__all__'
-
-
-class UserLocationInLineSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
-
-    class Meta:
-        model = UserLocation
-        fields = ('country', 'region', 'area')
-
-
-class DepartmentSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
-
-    class Meta:
-        model = Department
-        fields = '__all__'
-
-
-class DepartmentInLineSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
-
-    class Meta:
-        model = Department
-        fields = ('id', 'name')
-
-
 class UserCreateSerializer(serializers.ModelSerializer):
-    department = DepartmentInLineSerializer(read_only=True)
-    location = UserLocationInLineSerializer(read_only=True)
     age = serializers.ReadOnlyField(source='calculate_age')
 
     @transaction.atomic
@@ -196,10 +166,7 @@ class UserListSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
     full_name = serializers.ReadOnlyField(source='get_full_name')
     short_name = serializers.ReadOnlyField(source='get_short_name')
     age = serializers.ReadOnlyField(source='calculate_age')
-    department = DepartmentInLineSerializer(read_only=True)
-    location = UserLocationInLineSerializer(read_only=True)
     project = ProjectInLineSerializer(read_only=True)
-
 
     class Meta:
         model = User
@@ -210,10 +177,7 @@ class UserDetailSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
     full_name = serializers.ReadOnlyField(source='get_full_name')
     short_name = serializers.ReadOnlyField(source='get_short_name')
     age = serializers.ReadOnlyField(source='calculate_age')
-    department = DepartmentInLineSerializer(read_only=True)
-    location = UserLocationInLineSerializer(read_only=True)
     project = ProjectInLineSerializer(read_only=True)
-
 
     class Meta:
         model = User
