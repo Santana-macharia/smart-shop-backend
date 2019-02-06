@@ -7,25 +7,25 @@ from django.db.models import Q
 
 from api.common.permissions import DjangoModifiedModelPermissions
 from api.common.models import get_default_project
-# from api.common.spark_config import Spark
+from api.common.spark_config import Spark
 from api.projects.models import CustomFields
 
-# def read_df(self, db_type):
-#     project = self.user.project.company
-#     if db_type is 'clean':
-#         name = 'Clean'
-#     else:
-#         name = 'Test'
-#     table_name = str(project)+'_'+name
-#     data_df = Spark.sqlContext.read.format('jdbc') \
-#         .options(
-#         url='jdbc:mysql://localhost:3306/bisda',
-#         dbtable=table_name,
-#         # dbtable=(str(name+'Data')),
-#         useSSL=False,
-#         user='b_d',
-#         password='b_d_password').load()
-#     return data_df
+def read_df(self, db_type):
+    project = self.user.project.company
+    if db_type is 'clean':
+        name = 'Clean'
+    else:
+        name = 'Test'
+    table_name = str(project)+'_'+name
+    data_df = Spark.sqlContext.read.format('jdbc') \
+        .options(
+        url='jdbc:mysql://localhost:3306/bisda',
+        dbtable=table_name,
+        # dbtable=(str(name+'Data')),
+        useSSL=False,
+        user='b_d',
+        password='b_d_password').load()
+    return data_df
 
 def custom_fields(self):
     custom_fields = CustomFields.objects.first()
