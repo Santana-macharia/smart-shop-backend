@@ -47,7 +47,8 @@ INSTALLED_APPS = [
 ]
 LOCAL_APPS = [
     'api.common',
-    'api.users'
+    'api.users',
+    'api.loader'
 ]
 INSTALLED_APPS += LOCAL_APPS
 
