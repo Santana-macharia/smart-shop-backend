@@ -49,11 +49,16 @@ def import_data(request):
 
         data_df = Spark.sqlContext.createDataFrame(data, schema)
         table_name = str(company_name)+'_Test'
-        data_df.drop(drop_column).collect()
+        if drop_column:
+            data_df.drop(drop_column).collect()
 
-        unique_value = CustomFields.objects.get(project_id=project_id)
-        unique_value.date_column = date_column
-        unique_value.save()
+        if date_column:
+            try:
+                unique_value = CustomFields.objects.get(project_id=project_id)
+                unique_value.date_column = date_column
+                unique_value.save()
+            except:
+                pass
 
         data_df.write.format('jdbc').options(
             url='jdbc:mysql://localhost:3306/disease',
@@ -84,7 +89,7 @@ def show_distinct_rows(request):
 
     context = {'all_data': json_df, 'count': data_df.count(),
                'distinct_count': distinct_df.count(), 'distinct_df': non_duplicates_df}
-    return render(request, 'show_distinct.html', context)
+    return render(request, 'show_distinct_rows.html', context)
 
 
 def show_distinct_ids(request):
@@ -131,7 +136,7 @@ def show_distinct_ids(request):
 
     context = {'all_data': json_df, 'distinct_ids': distinct,
                'clean_df': clean_json}
-    return render(request, 'show_distinct.html', context)
+    return render(request, 'show_distinct_ids.html', context)
 
 
 def show_missing_observations(request):
@@ -190,7 +195,7 @@ def show_missing_observations(request):
 
     context = {'all_data': json_df, 'missing_percentages': df_percentage,
                'clean_data': clean_json_df}
-    return render(request, 'show_distinct.html', context)
+    return render(request, 'missing_observations.html', context)
 
 
 def pre_process(request):
@@ -277,10 +282,10 @@ def pre_process(request):
 
     # Final step is to save the pre_processed DF to the DB
     data_less_rows.write.format('jdbc').options(
-        url='jdbc:mysql://localhost:3306/bisda',
+        url='jdbc:mysql://localhost:3306/disease',
         dbtable=table_name,
-        user='b_d',
-        password='b_d_password').mode('append').save()
+        user='santana',
+        password='root').mode('append').save()
 
     context = {
                 'all_data': json_df,
@@ -330,7 +335,3 @@ class DistinctRowsList(GetQuerysetMixin, generics.ListAPIView):
 class DistinctIdsList(GetQuerysetMixin, generics.ListAPIView):
     queryset = DistinctIds.objects.order_by('id')
     serializer_class =DistinctIdsSerializer
-
-class MissingObservationsList(GetQuerysetMixin, generics.ListAPIView):
-    queryset = MissingObservations.objects.order_by('id')
-    serializer_class = MissingObservationsSerializer
