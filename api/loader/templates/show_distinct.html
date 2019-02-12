@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease</title>
+</head>
+<body>
+    {% block content %}
+        Here's the Data Frame <br/>
+        {{ all_data }}
+        <br/>The Total Number of Rows is:<br/>
+        {{ rows_count }}
+        <br/>The Total Number of Distinct Rows is:<br/>
+        {{ distinct_rows }}
+        <br/>The Total Number of Distinct Rows without considering Ids is:<br/>
+        {{ distinct_rows_without_id }}
+        <br/>The Total Number of Distinct IDs is:<br/>
+        {{ distinct_ids }}
+        <br/>The Percentage of Missing Observations for each Attribute is:<br/>
+        {{ missing_percentages }}
+        <br/>Here's the final cleaned data:<br/>
+        {{ clean_data }}
+    {% endblock %}
+</body>
+</html>
