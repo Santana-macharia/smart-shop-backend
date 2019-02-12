@@ -1,0 +1,262 @@
+agegroup,agegrouptext,count,disease,ethnicity,gender,il,race,stateorcounty,year,yeartext,climate
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2005,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2005,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2005,Year,wet
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2005,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2005,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2005,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2005,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2005,Year,wet
+Unknown,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2005,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Asian,S,2005,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,BlackAfricanAmer,S,2005,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,Other,S,2005,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Other,S,2005,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2005,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,Unknown,S,2005,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Unknown,S,2005,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Unknown,S,2005,Year,wet
+35-39 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Unknown,S,2005,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2005,Year,wet
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2005,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2005,Year,wet
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2005,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2006,Year,wet
+5-9 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2006,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2006,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2006,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2006,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2006,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2006,Year,wet
+50-54 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2006,Year,wet
+65 + Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Asian,S,2006,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Asian,S,2006,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Multiple Races,S,2006,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,Other,S,2006,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Other,S,2006,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,Unknown,S,2006,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,IL,White,S,2006,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2006,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2006,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,wet
+10-14 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2007,Year,
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2007,Year,
+60-64 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2007,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Asian,S,2007,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Asian,S,2007,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,BlackAfricanAmer,S,2007,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,BlackAfricanAmer,S,2007,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,IL,Other,S,2007,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2007,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Other,S,2007,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Other,S,2007,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Other,S,2007,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,Unknown,S,2007,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Unknown,S,2007,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Unknown,S,2007,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2007,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2008,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2008,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2008,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2008,Year,
+25-29 Years,CD5yr,3,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2008,Year,wet
+30-34 Years,CD5yr,3,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2008,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2008,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Asian,S,2008,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2008,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2008,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,IL,White,S,2008,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,IL,White,S,2008,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,White,S,2008,Year,wet
+45-49 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2008,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2009,Year,
+25-29 Years,CD5yr,3,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2009,Year,wet
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2009,Year,
+65 + Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2009,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2009,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2009,Year,
+5-9 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2009,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Asian,S,2009,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Other,S,2009,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,IL,White,S,2009,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,White,S,2009,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2009,Year,
+10-14 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2010,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2010,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2010,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2010,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2010,Year,
+5-9 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2010,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,Asian,S,2010,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Other,S,2010,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Other,S,2010,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2010,Year,
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2010,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Unknown,S,2010,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,White,S,2010,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2010,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2010,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2010,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2010,Year,
+0-4 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2011,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2011,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2011,Year,
+20-24 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2011,Year,
+25-29 Years,CD5yr,3,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2011,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Asian,S,2011,Year,
+0-4 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2011,Year,
+10-14 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2011,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2011,Year,
+30-34 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2011,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2011,Year,
+60-64 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Asian,S,2011,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,BlackAfricanAmer,S,2011,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,Other,S,2011,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,Other,S,2011,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,Other,S,2011,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,IL,Other,S,2011,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,IL,White,S,2011,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,IL,White,S,2011,Year,wet
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,IL,White,S,2011,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,IL,White,S,2011,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2005,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2005,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2005,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2005,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2005,Year,
+Unknown,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2005,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,BlackAfricanAmer,C,2005,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,Other,C,2005,Year,dry
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Other,C,2005,Year,dry
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Other,C,2005,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Cook,Unknown,C,2005,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Cook,Unknown,C,2005,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,White,C,2005,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,White,C,2005,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,Asian,C,2005,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Dupage,Unknown,C,2005,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Kane,Unknown,C,2005,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Lake,Asian,C,2005,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Lake,White,C,2005,Year,
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Madison,Asian,C,2005,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Rock Island,Asian,C,2005,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Rock Island,Asian,C,2005,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2006,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2006,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2006,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2006,Year,
+50-54 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2006,Year,wet
+65 + Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Cook,Asian,C,2006,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Cook,Asian,C,2006,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,Other,C,2006,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Other,C,2006,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,Unknown,C,2006,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,Cook,White,C,2006,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,White,C,2006,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Dupage,White,C,2006,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Lake,Asian,C,2006,Year,wet
+40-44 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Peoria,Asian,C,2006,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Rock Island,Multiple Races,C,2006,Year,dry
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Will,Asian,C,2006,Year,dry
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Will,Asian,C,2006,Year,dry
+10-14 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2007,Year,dry
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2007,Year,dry
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2007,Year,dry
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2007,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2007,Year,
+60-64 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2007,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,BlackAfricanAmer,C,2007,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,BlackAfricanAmer,C,2007,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,Cook,Other,C,2007,Year,
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Other,C,2007,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Cook,Other,C,2007,Year,wet
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,Asian,C,2007,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Dupage,Asian,C,2007,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Dupage,Asian,C,2007,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Dupage,Unknown,C,2007,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Dupage,Unknown,C,2007,Year,wet
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Dupage,White,C,2007,Year,wet
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Kane,Asian,C,2007,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Peoria,Asian,C,2007,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Peoria,Other,C,2007,Year,dry
+5-9 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Peoria,Other,C,2007,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Champaign,Asian,C,2008,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2008,Year,wet
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2008,Year,wet
+30-34 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2008,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2008,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Other,C,2008,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Other,C,2008,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,White,C,2008,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Dupage,Asian,C,2008,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Dupage,Asian,C,2008,Year,
+40-44 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,Dupage,White,C,2008,Year,
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Lake,Asian,C,2008,Year,
+45-49 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Mchenry,White,C,2008,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Mclean,Asian,C,2008,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Mclean,Asian,C,2008,Year,
+30-34 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,Will,White,C,2008,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2009,Year,wet
+65 + Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2009,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2009,Year,wet
+55-59 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Cook,Asian,C,2009,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Female,Cook,White,C,2009,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,White,C,2009,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,Asian,C,2009,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Dupage,Asian,C,2009,Year,
+5-9 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Dupage,Asian,C,2009,Year,
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,White,C,2009,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Lake,Asian,C,2009,Year,dry
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Rock Island,Asian,C,2009,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Will,Asian,C,2009,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Champaign,Asian,C,2010,Year,wet
+10-14 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2010,Year,wet
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2010,Year,
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2010,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Cook,Asian,C,2010,Year,
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Cook,Other,C,2010,Year,
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Unknown,C,2010,Year,
+25-29 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,White,C,2010,Year,
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,White,C,2010,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,White,C,2010,Year,wet
+55-59 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,White,C,2010,Year,
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Dupage,Asian,C,2010,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Dupage,Asian,C,2010,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,White,C,2010,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Kane,Asian,C,2010,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Kendall,Other,C,2010,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Kendall,Other,C,2010,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Sangamon,Other,C,2010,Year,wet
+10-14 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Champaign,Asian,C,2011,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2011,Year,wet
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2011,Year,wet
+25-29 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Female,Cook,Asian,C,2011,Year,wet
+0-4 Years,CD5yr,2,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2011,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2011,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2011,Year,wet
+60-64 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Asian,C,2011,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,BlackAfricanAmer,C,2011,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,Other,C,2011,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,Other,C,2011,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,Hispanic or Latino,Male,Cook,White,C,2011,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Cook,White,C,2011,Year,wet
+35-39 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Cook,White,C,2011,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Female,Cook,White,C,2011,Year,wet
+0-4 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,Asian,C,2011,Year,wet
+15-19 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,Asian,C,2011,Year,dry
+20-24 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Dupage,Asian,C,2011,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Kane,Asian,C,2011,Year,wet
+5-9 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Lake,Asian,C,2011,Year,wet
+30-34 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Male,Lake,Asian,C,2011,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Mclean,Asian,C,2011,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,NotHispNotLatino,Female,Will,Asian,C,2011,Year,wet
+10-14 Years,CD5yr,1,Typhoid Fever,UnkwnNotClassified,Male,Winnebago,Other,C,2011,Year,wet
+55-59 Years,CD5yr,1,Typhoid Fever,na,Male,Morgan,na,C,2005,Year,wet
+25-29 Years,CD5yr,1,Typhoid Fever,na,Female,Jackson,na,C,2009,Year,dry
+5-9 Years,CD5yr,1,Typhoid Fever,na,Female,Knox,na,C,2011,Year,wet
+na,CD5yr,1,Typhoid Fever,na,na,Out Of State,na,C,2007,Year,wet

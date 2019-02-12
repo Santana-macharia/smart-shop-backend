@@ -56,12 +56,12 @@ def import_data(request):
         unique_value.save()
 
         data_df.write.format('jdbc').options(
-            url='jdbc:mysql://localhost:3306/bisda',
+            url='jdbc:mysql://localhost:3306/disease',
             dbtable=table_name,
-            user='b_d',
-            password='b_d_password').mode('append').save()
+            user='santana',
+            password='root').mode('append').save()
 
-    return render(request, 'import_users.html')
+    return render(request, 'import_data.html')
 
 
 def show_distinct_rows(request):
