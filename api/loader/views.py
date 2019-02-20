@@ -66,7 +66,7 @@ def import_data(request):
             user='santana',
             password='root').mode('append').save()
 
-    return render(request, 'import_data.html')
+    return render(request, "import_data.html")
 
 
 def show_distinct_rows(request):
@@ -271,8 +271,8 @@ def pre_process(request):
     for key, value in means.items():
         if (means[key]==None):
             means[key] = 'missing'
+    means.pop(None)
 
-    # Fill the empty observations with the mean of the column
     data_less_rows.fillna(means)
 
     clean_json_df = data_less_rows.toPandas()
@@ -334,4 +334,4 @@ class DistinctRowsList(GetQuerysetMixin, generics.ListAPIView):
 
 class DistinctIdsList(GetQuerysetMixin, generics.ListAPIView):
     queryset = DistinctIds.objects.order_by('id')
-    serializer_class =DistinctIdsSerializer
+    serializer_class = DistinctIdsSerializer

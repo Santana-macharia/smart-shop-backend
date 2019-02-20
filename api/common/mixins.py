@@ -10,6 +10,7 @@ from api.common.models import get_default_project
 from api.common.spark_config import Spark
 from api.projects.models import CustomFields
 
+
 def read_df(self, db_type):
     project = self.user.project.company
     if db_type is 'clean':
@@ -26,6 +27,7 @@ def read_df(self, db_type):
         user='santana',
         password='root').load()
     return data_df
+
 
 def custom_fields(self):
     custom_fields = CustomFields.objects.first()
@@ -55,6 +57,7 @@ def custom_fields(self):
         'prediction': prediction_field
     }
     return new_fields
+
 
 class GetProjectMixin(object):
     project = None
