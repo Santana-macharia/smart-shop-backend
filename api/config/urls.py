@@ -26,4 +26,8 @@ urlpatterns = [
             PasswordResetCompleteView.as_view(), name='password_reset_complete'),
     re_path(r'^static/(?P<path>.*)$',
             serve, {'document_root': settings.STATIC_ROOT}),
+<<<<<<< HEAD
 ]
+=======
+]
+>>>>>>> f4013fd769388157b4f8b20240241795fc101162
