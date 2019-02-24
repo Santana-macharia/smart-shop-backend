@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease</title>
+</head>
+<body>
+    {% block content %}
+        Here's the Data Frame <br/>
+        {{ all_data }}
+        <br/>The Total Number of Distinct IDs is:<br/>
+        {{ distinct_ids }}
+        <br/>Here's the final cleaned data:<br/>
+        {{ clean_df}}
+    {% endblock %}
+</body>
+</html>

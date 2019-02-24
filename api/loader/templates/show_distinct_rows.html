@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disease</title>
+</head>
+<body>
+    {% block content %}
+        Here's the Data Frame <br/>
+        {{ all_data }}
+        <br/>The Total Number of Rows is:<br/>
+        {{ count }}
+        <br/>The Total Number of Distinct Rows is:<br/>
+        {{ distinct_count }}
+        <br/>Here's the final cleaned data:<br/>
+        {{ distinct_df }}
+    {% endblock %}
+</body>
+</html>
