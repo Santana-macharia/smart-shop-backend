@@ -1,11 +1,11 @@
 from django.db import models
-
+from jsonfield import JSONField
 from api.common.models import AbstractBase
 
 
 class DistinctRows(AbstractBase):
-    total_count = models.IntegerField(default=0)
-    distinct_rows = models.IntegerField(default=0)
+    total_count = models.IntegerField(default=0, null=True, blank=True)
+    distinct_rows = models.IntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return '%s total rows with %s distinct' % (str(self.total_count), str(self.distinct_rows))
@@ -15,8 +15,8 @@ class DistinctRows(AbstractBase):
 
 
 class DistinctIds(AbstractBase):
-    total_ids = models.IntegerField(default=0)
-    distinct_ids = models.IntegerField(default=0)
+    total_ids = models.IntegerField(default=0, null=True, blank=True)
+    distinct_ids = models.IntegerField(default=0, null=True, blank=True)
 
     def __str__(self):
         return '%s total ids with %s distinct' % (str(self.total_ids), str(self.distinct_ids))
@@ -26,10 +26,10 @@ class DistinctIds(AbstractBase):
 
 
 class MissingObservations(AbstractBase):
-    missing_columns = models.TextField(blank=True, null=True)
-    missing_data = models.TextField(blank=True, null=True)
-    clean_columns = models.TextField(blank=True, null=True)
-    clean_data = models.TextField(blank=True, null=True)
+    missing_columns = JSONField(null=True, blank=True)
+
+    def __str__(self):
+        return 'Missing observations per column %s' % (str(self.missing_columns))
 
     class Meta:
         app_label = 'loader'

@@ -202,6 +202,8 @@ def pre_process(request):
     # Read all the custom fields
     unique_fields = custom_fields(request)
     company_name = request.user.project.company
+    created_by = request.user
+    project = request.user.project
 
     # First, read the data
     data_df = read_df(request, 'test')
@@ -255,6 +257,9 @@ def pre_process(request):
         (1- (fn.count(c) / fn.count('*'))).alias(c + '_missing')
         for c in clean_df.columns
     ]).collect()
+    df = str(df_percentage)
+    new = df.replace("[", "").replace("Row", "").replace("(", "").replace("]", "").replace(")", "").split(",")
+    new = json.dumps(new)
 
     # Can instead use correlation to check which attributes to drop
 
@@ -280,6 +285,16 @@ def pre_process(request):
 
     table_name = str(company_name) + '_Clean'
 
+    total_rows = data_df.count()
+    distinct_rows = distinct_rows.count()
+
+    # Save the data to the database for easier reuse
+    DistinctRows.objects.create(total_count=total_rows, distinct_rows=distinct_rows, created_by=created_by, project=project)
+
+    DistinctIds.objects.create(total_ids=total_rows, distinct_ids=distinct, created_by=created_by, project=project)
+
+    MissingObservations.objects.create(missing_columns=new, created_by=created_by, project=project)
+
     # Final step is to save the pre_processed DF to the DB
     data_less_rows.write.format('jdbc').options(
         url='jdbc:mysql://localhost:3306/disease',
@@ -289,37 +304,14 @@ def pre_process(request):
 
     context = {
                 'all_data': json_df,
-                'rows_count': data_df.count,
-                'distinct_rows': distinct_rows.count,
-                'distinct_rows_without_id': distinct_rows.count,
+                'rows_count': total_rows,
+                'distinct_rows': distinct_rows,
+                'distinct_rows_without_id': distinct_rows,
                 'distinct_ids': distinct,
-                'missing_percentages': df_percentage,
+                'missing_percentages': new,
                 'clean_data': clean_json_df
     }
     return render(request, 'show_distinct.html', context)
-
-# def ListMissingObservations(request):
-#     # First, read the data
-#     # data_df = read_df(request, 'clean')
-#     data_df = Spark.sqlContext.read.format('jdbc') \
-#         .options(
-#         url='jdbc:mysql://localhost:3306/bisda',
-#         dbtable='Swisscom_Clean',
-#         # dbtable=(str(name+'Data')),
-#         useSSL=False,
-#         user='b_d',
-#         password='b_d_password').load()
-#
-#     json_df = data_df.toPandas()
-#     json_df.to_json()
-#
-#     columns = data_df.columns
-#
-#     rdd = data_df.rdd.map(list)
-#     data = rdd.collect()
-#
-#     context = {'columns': columns, 'rows': data}
-#     return (context)
 
 
 class MissingObservationsList(GetQuerysetMixin, generics.ListAPIView):

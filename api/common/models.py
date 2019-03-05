@@ -95,6 +95,7 @@ class AbstractBase(models.Model):
 
     def save(self, *args, **kwargs):
         if self._state.adding:
+
             # If the user has no set created_by use the default user
             if not hasattr(self, 'created_by'):
                 self.created_by = get_default_user()
