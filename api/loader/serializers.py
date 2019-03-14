@@ -19,7 +19,11 @@ class DistinctIdsSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
 
 
 class MissingObservationsSerializer(AbstractFieldsMixin, serializers.ModelSerializer):
+    missing_columns = serializers.SerializerMethodField('clean_json')
 
     class Meta:
         model = MissingObservations
         fields = '__all__'
+
+    def clean_json(self, obj):
+        return obj.missing_columns

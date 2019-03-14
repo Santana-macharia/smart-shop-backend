@@ -51,7 +51,8 @@ def import_data(request):
         table_name = str(company_name)+'_Test'
         if drop_column:
             data_df.drop(drop_column).collect()
-
+        # import pdb
+        # pdb.set_trace()
         if date_column:
             try:
                 unique_value = CustomFields.objects.get(project_id=project_id)
