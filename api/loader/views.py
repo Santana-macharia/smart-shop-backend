@@ -6,7 +6,6 @@ from django.utils import timezone
 import datetime
 from datetime import datetime as dt
 from pyspark.sql import functions as fn, types as typ
-from pyspark.sql.functions import col
 
 from api.common.mixins import read_df, custom_fields, GetQuerysetMixin
 from api.common.spark_config import Spark
@@ -276,7 +275,10 @@ def pre_process(request):
     for key, value in means.items():
         if (means[key]==None):
             means[key] = 'missing'
-    means.pop(None)
+    try:
+        means.pop(None)
+    except:
+        pass
 
     data_less_rows.fillna(means)
 
