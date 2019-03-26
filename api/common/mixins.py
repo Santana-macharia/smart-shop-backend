@@ -30,31 +30,31 @@ def read_df(self, db_type):
 
 
 def custom_fields(self):
-    custom_fields = CustomFields.objects.first()
+    custom_fields = CustomFields.objects.filter(project=self.user.project.id).first()
 
-    if custom_fields.index_field2 != '' or custom_fields.index_field3 != '':
-        index_field = []
-        if custom_fields.index_field2 != '':
-            index_field.append(custom_fields.index_field2)
-        if custom_fields.index_field3 != '':
-            index_field.append(custom_fields.index_field3)
-
-    else:
-        index_field = custom_fields.index_field
-
-    if custom_fields.prediction_field2 != '' or custom_fields.prediction_field3 != '':
-        prediction_field = []
-        if custom_fields.prediction_field2 != '':
-            prediction_field.append(custom_fields.prediction_field2)
-        if custom_fields.prediction_field3 != '':
-            prediction_field.append(custom_fields.prediction_field3)
-
-    else:
-        prediction_field = custom_fields.prediction_field
+    # if custom_fields.index_field2 != '' or custom_fields.index_field3 != '':
+    #     index_field = []
+    #     if custom_fields.index_field2 != '':
+    #         index_field.append(custom_fields.index_field2)
+    #     if custom_fields.index_field3 != '':
+    #         index_field.append(custom_fields.index_field3)
+    #
+    # else:
+    #     index_field = custom_fields.index_field
+    #
+    # if custom_fields.prediction_field2 != '' or custom_fields.prediction_field3 != '':
+    #     prediction_field = []
+    #     if custom_fields.prediction_field2 != '':
+    #         prediction_field.append(custom_fields.prediction_field2)
+    #     if custom_fields.prediction_field3 != '':
+    #         prediction_field.append(custom_fields.prediction_field3)
+    #
+    # else:
+    #     prediction_field = custom_fields.prediction_field
 
     new_fields = {
-        'index': index_field,
-        'prediction': prediction_field
+        'index': custom_fields.index_field,
+        'prediction': custom_fields.prediction_field
     }
     return new_fields
 
