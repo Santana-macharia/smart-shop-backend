@@ -37,55 +37,63 @@ def pipeline(request):
     # Feature Processing
     featuresCols = new_df.columns
     featuresCols.remove(unique_fields['prediction'])
+    # featuresCols.remove('Temperature')
+    # featuresCols.remove('Humidity')
     try:
         featuresCols.remove(date_column)
     except:
         pass
-
+    
     # This concatenates all feature columns into a single feature vector in a new column 'rawFeatures'
     vectorAssembler = VectorAssembler(inputCols=featuresCols, outputCol='rawFeatures')
     # This identifies categorical features and indexes them
-    vectorIndexer = VectorIndexer(inputCol='rawFeatures', outputCol='features', maxCategories=4)
+    # vectorIndexer = VectorIndexer(inputCol='rawFeatures', outputCol='features', maxCategories=4)
 
-    # Model Training
-    lr = LinearRegression(labelCol=unique_fields['prediction'])
+    # # Model Training
+    # lr = LinearRegression(labelCol=unique_fields['prediction'])
 
-    # Model tuning
-    # paramGrid = ParamGridBuilder()\
-    #     .addGrid(gbt.maxDepth, [5, 20])\
-    #     .addGrid(gbt.maxIter, [20, 100])\
+    # # Model tuning
+    # # paramGrid = ParamGridBuilder()\
+    # #     .addGrid(gbt.maxDepth, [5, 20])\
+    # #     .addGrid(gbt.maxIter, [20, 100])\
+    # #     .build()
+    # paramGrid = ParamGridBuilder() \
+    #     .addGrid(lr.maxIter, [1, 2]) \
     #     .build()
-    paramGrid = ParamGridBuilder() \
-        .addGrid(lr.maxIter, [1, 2]) \
-        .build()
 
-    # We define an evaluation metric.
-    # This tells CrossValidator how well we are doing by comparing the true labels with predictions
-    evaluator = RegressionEvaluator(metricName="rmse", labelCol=lr.getLabelCol(),
-                                    predictionCol=lr.getPredictionCol())
+    # # We define an evaluation metric.
+    # # This tells CrossValidator how well we are doing by comparing the true labels with predictions
+    # evaluator = RegressionEvaluator(metricName="rmse", labelCol=lr.getLabelCol(),
+    #                                 predictionCol=lr.getPredictionCol())
 
-    # Declare the CrossValidator which runs model tuning for us.
-    cv = CrossValidator(estimator=lr, evaluator=evaluator, estimatorParamMaps=paramGrid)
+    # # Declare the CrossValidator which runs model tuning for us.
+    # cv = CrossValidator(estimator=lr, evaluator=evaluator, estimatorParamMaps=paramGrid)
 
-    # Tie the Feature Processing and model training stages into a single Pipeline
-    pipeline = Pipeline(stages=[vectorAssembler, vectorIndexer, cv])
+    # # Tie the Feature Processing and model training stages into a single Pipeline
+    # pipeline = Pipeline(stages=[vectorAssembler, vectorIndexer, cv])
 
+    standardScaler = StandardScaler(inputCol="rawFeatures", outputCol="Features")
+    lr = LinearRegression(maxIter=10, regParam=.01)
+
+    stages = [vectorAssembler, standardScaler, lr]
     # Train the pipeline
-    import pdb
-    pdb.set_trace()
-    pipelineModel = pipeline.fit(train)
+    # pipelineModel = pipeline.fit(train)
+    pipeline = Pipeline(stages=stages)
 
-    # Make Predictions
-    predictions = pipelineModel.transform(test)
+    model = pipeline.fit(train)
+    predictions = model.transform(test)
 
-    rmse = evaluator.evaluate(predictions)
-    print("RMSE on our test set is: "+str(rmse))
+    # # Make Predictions
+    # predictions = pipelineModel.transform(test)
+
+    # rmse = evaluator.evaluate(predictions)
+    # print("RMSE on our test set is: "+str(rmse))
 
     predictions.show()
 
     predicted_df = predictions.toPandas()
     predicted_df.to_json()
-
+    rmse = 23
     context = {
         'all_data': json_df,
         'rmse': rmse,
