@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from pyspark.sql.functions import col
-from pyspark.ml import Pipeline
 from pyspark.ml.feature import VectorAssembler, VectorIndexer
-from pyspark.ml.regression import GBTRegressor
 from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
 from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.regression import LinearRegression
+from pyspark.ml.feature import StandardScaler
+from pyspark.ml import Pipeline
+from pyspark.sql.functions import *
 
 from api.common.mixins import read_df, custom_fields
 from api.projects.models import CustomFields
@@ -28,14 +30,17 @@ def pipeline(request):
     # new_df.na.drop()
     new_df.printSchema()
 
+
     # Split data into training and test sets
     train, test = new_df.randomSplit([0.7, 0.3])
 
     # Feature Processing
     featuresCols = new_df.columns
     featuresCols.remove(unique_fields['prediction'])
-    featuresCols.remove(date_column)
-    featuresCols.remove('IsHoliday')
+    try:
+        featuresCols.remove(date_column)
+    except:
+        pass
 
     # This concatenates all feature columns into a single feature vector in a new column 'rawFeatures'
     vectorAssembler = VectorAssembler(inputCols=featuresCols, outputCol='rawFeatures')
@@ -43,7 +48,7 @@ def pipeline(request):
     vectorIndexer = VectorIndexer(inputCol='rawFeatures', outputCol='features', maxCategories=4)
 
     # Model Training
-    gbt = GBTRegressor(labelCol=unique_fields['prediction'])
+    lr = LinearRegression(labelCol=unique_fields['prediction'])
 
     # Model tuning
     # paramGrid = ParamGridBuilder()\
@@ -51,22 +56,23 @@ def pipeline(request):
     #     .addGrid(gbt.maxIter, [20, 100])\
     #     .build()
     paramGrid = ParamGridBuilder() \
-        .addGrid(gbt.maxDepth, [1, 2]) \
-        .addGrid(gbt.maxIter, [1, 2]) \
+        .addGrid(lr.maxIter, [1, 2]) \
         .build()
 
     # We define an evaluation metric.
     # This tells CrossValidator how well we are doing by comparing the true labels with predictions
-    evaluator = RegressionEvaluator(metricName="rmse", labelCol=gbt.getLabelCol(),
-                                    predictionCol=gbt.getPredictionCol())
+    evaluator = RegressionEvaluator(metricName="rmse", labelCol=lr.getLabelCol(),
+                                    predictionCol=lr.getPredictionCol())
 
     # Declare the CrossValidator which runs model tuning for us.
-    cv = CrossValidator(estimator=gbt, evaluator=evaluator, estimatorParamMaps=paramGrid)
+    cv = CrossValidator(estimator=lr, evaluator=evaluator, estimatorParamMaps=paramGrid)
 
     # Tie the Feature Processing and model training stages into a single Pipeline
     pipeline = Pipeline(stages=[vectorAssembler, vectorIndexer, cv])
 
     # Train the pipeline
+    import pdb
+    pdb.set_trace()
     pipelineModel = pipeline.fit(train)
 
     # Make Predictions
