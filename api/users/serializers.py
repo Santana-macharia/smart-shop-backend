@@ -109,14 +109,14 @@ class UserCreateSerializer(serializers.ModelSerializer):
     @transaction.atomic
     def create(self, validated_data):
         groups = validated_data.pop('groups', [])
-        password = validated_data.pop('password', None)
+        # password = validated_data.pop('password', None)
         user_permissions = validated_data.pop('user_permissions', [])
 
         validated_data['updated_at'] = timezone.now()
         validated_data['active'] = True
         validated_data['deleted'] = False
 
-        validated_data['password'] = make_password(password)
+        # validated_data['password'] = make_password(password)
 
         if not validated_data.get('created_by', None):
             validated_data['created_by'] = self.context['request'].user
@@ -141,7 +141,7 @@ class UserCreateSerializer(serializers.ModelSerializer):
 
         # In case update contains  a password
         if password is not None:
-            password = make_password(password)
+            # password = make_password(password)
             setattr(user, 'password', password)
 
         user.updated_at = timezone.now()
