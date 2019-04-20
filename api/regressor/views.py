@@ -56,7 +56,8 @@ def pipeline(request):
     featuresCols.remove('IsHoliday')
     featuresCols.remove('Date')
     featuresCols.remove('New_id')
-    # ['Temperature', 'Fuel_Price', 'MarkDown1', 'MarkDown2', 'MarkDown3', 'MarkDown4', 'MarkDown5', 'Unemployment']
+    drop_list = ['MarkDown1', 'MarkDown2', 'MarkDown3', 'MarkDown4', 'MarkDown5', 'Unemployment']
+    train.select([column for column in train.columns if column not in drop_list])
     featuresCols = ['Temperature', 'Fuel_Price']
 
     try:
