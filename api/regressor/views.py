@@ -18,16 +18,32 @@ def pipeline(request):
     date_column = date_column.date_column
 
     # First, read the data
-    data_df = read_df(request,'clean')
+    data_df = read_df(request, 'clean')
     json_df = data_df.toPandas()
     json_df.to_json()
+    means = {
+        'Temperature': 58.69494958753438,
+        'MarkDown3': 1760.1001799058945,
+        'Unemployment': 7.637229580260918,
+        'Store': 22.383789446117586,
+        'MarkDown1': 7032.37178571428,
+        'Date': 'missing',
+        'MarkDown2': 3384.1765936323172,
+        'Fuel_Price': 3.416290821003011,
+        'New_id': 863659041082.129,
+        'MarkDown4': 3292.9358862586596,
+        'MarkDown5': 4132.216422222224,
+        'IsHoliday': 'missing',
+        'CPI': 173.01035410582807
+    }
+    # data_df.na.fill(means)
 
     # Cast all the columns to numeric
     string_columns = [date_column]
     data_df = data_df.drop(unique_fields['index'])
 
     new_df = data_df.select([col(c).cast("double").alias(c) for c in data_df.columns])
-    # new_df.na.drop()
+    new_df.na.drop()
     new_df.printSchema()
 
 
@@ -37,13 +53,17 @@ def pipeline(request):
     # Feature Processing
     featuresCols = new_df.columns
     featuresCols.remove(unique_fields['prediction'])
-    # featuresCols.remove('Temperature')
-    # featuresCols.remove('Humidity')
+    featuresCols.remove('IsHoliday')
+    featuresCols.remove('Date')
+    featuresCols.remove('New_id')
+    # ['Temperature', 'Fuel_Price', 'MarkDown1', 'MarkDown2', 'MarkDown3', 'MarkDown4', 'MarkDown5', 'Unemployment']
+    featuresCols = ['Temperature', 'Fuel_Price']
+
     try:
         featuresCols.remove(date_column)
     except:
         pass
-    
+
     # This concatenates all feature columns into a single feature vector in a new column 'rawFeatures'
     vectorAssembler = VectorAssembler(inputCols=featuresCols, outputCol='rawFeatures')
     # This identifies categorical features and indexes them
@@ -72,8 +92,8 @@ def pipeline(request):
     # # Tie the Feature Processing and model training stages into a single Pipeline
     # pipeline = Pipeline(stages=[vectorAssembler, vectorIndexer, cv])
 
-    standardScaler = StandardScaler(inputCol="rawFeatures", outputCol="Features")
-    lr = LinearRegression(maxIter=10, regParam=.01)
+    standardScaler = StandardScaler(inputCol="rawFeatures", outputCol="features")
+    lr = LinearRegression(labelCol=unique_fields['prediction'], maxIter=10, regParam=.01)
 
     stages = [vectorAssembler, standardScaler, lr]
     # Train the pipeline

@@ -257,6 +257,8 @@ def pre_process(request):
         (1- (fn.count(c) / fn.count('*'))).alias(c + '_missing')
         for c in clean_df.columns
     ]).collect()
+
+    # To save to db
     df = str(df_percentage)
     new = df.replace("[", "").replace("Row", "").replace("(", "").replace("]", "").replace(")", "").split(",")
     new = json.dumps(new)
@@ -280,7 +282,6 @@ def pre_process(request):
         means.pop(None)
     except:
         pass
-
     data_less_rows.fillna(means)
 
     clean_json_df = data_less_rows.toPandas()
