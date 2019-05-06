@@ -46,7 +46,21 @@ def pipeline(request):
     standardScaler = StandardScaler(inputCol="rawFeatures", outputCol="features")
     lr = LinearRegression(labelCol=unique_fields['prediction'], maxIter=10, regParam=.01)
 
-    stages = [vectorAssembler, standardScaler, lr]
+    # Model tuning
+    paramGrid = ParamGridBuilder() \
+        .addGrid(lr.maxIter, [10, 100, 1000]) \
+        .addGrid(lr.regParam, [0.1, 0.01]) \
+        .build()
+
+    # We define an evaluation metric.
+    # This tells CrossValidator how well we are doing by comparing the true labels with predictions
+    evaluator = RegressionEvaluator(metricName="rmse", labelCol=lr.getLabelCol(),
+                                    predictionCol=lr.getPredictionCol())
+
+    # Declare the CrossValidator which runs model tuning for us.
+    cv = CrossValidator(estimator=lr, evaluator=evaluator, estimatorParamMaps=paramGrid)
+
+    stages = [vectorAssembler, standardScaler, cv]
 
     # Train the pipeline
     pipeline = Pipeline(stages=stages)
@@ -54,11 +68,14 @@ def pipeline(request):
     model = pipeline.fit(train)
     predictions = model.transform(test)
 
+    rmse = evaluator.evaluate(predictions)
+    print("RMSE on our test set is: " + str(rmse))
+
     predictions.show()
 
     predicted_df = predictions.toPandas()
     predicted_df.to_json()
-    rmse = 23
+    # rmse = 23
     context = {
         'all_data': json_df,
         'rmse': rmse,

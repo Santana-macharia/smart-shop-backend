@@ -30,9 +30,6 @@ def cluster(request):
             items.append(row[column])
         data.append((id, items))
 
-
-    # import pdb
-    # pdb.set_trace()
     # Create a Data Frame from the data dictionary
     final_data = Spark.sqlContext.createDataFrame(data, ["id", "items"])
 
@@ -49,9 +46,6 @@ def cluster(request):
 
     # Examines input items against all association rules and summarize consequents as prediction
     prediction = model.transform(data)
-
-    import pdb
-    pdb.set_trace()
 
     context = {
         'all_data': json_df,
