@@ -19,6 +19,9 @@ def import_data(request):
         new_file = next(iter(request.FILES.values()))
         # new_file = request.FILES['myfile']
         path = 'data/'+ str(new_file.name)
+
+       # import pdb
+       # pdb.set_trace()
         project_id = request.user.project.id
         company_name = request.user.project.company
 

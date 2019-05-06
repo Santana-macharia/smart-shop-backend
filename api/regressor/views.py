@@ -72,14 +72,14 @@ def pipeline(request):
     # # Tie the Feature Processing and model training stages into a single Pipeline
     # pipeline = Pipeline(stages=[vectorAssembler, vectorIndexer, cv])
 
-    standardScaler = StandardScaler(inputCol="rawFeatures", outputCol="Features")
+    standardScaler = StandardScaler(inputCol="rawFeatures", outputCol="featuresCols")
     lr = LinearRegression(maxIter=10, regParam=.01)
 
     stages = [vectorAssembler, standardScaler, lr]
     # Train the pipeline
     # pipelineModel = pipeline.fit(train)
     pipeline = Pipeline(stages=stages)
-
+    
     model = pipeline.fit(train)
     predictions = model.transform(test)
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dopda</title>
+</head>
+<body>
+    {% block content %}
+        Here's the Data Frame <br/>
+        {{ all_data }}
+        <br/>The Frequent Item Sets are: <br/>
+        {{ itemSets }}
+        <br/>The Generated Association Rules are: <br/>
+        {{ assocRules }}
+        <br/>The Predictions are: <br/>
+        {{ predicted }}
+    {% endblock %}
+</body>
+</html>
