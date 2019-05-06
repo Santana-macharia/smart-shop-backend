@@ -50,6 +50,8 @@ def pipeline(request):
     paramGrid = ParamGridBuilder() \
         .addGrid(lr.maxIter, [10, 100, 1000]) \
         .addGrid(lr.regParam, [0.1, 0.01]) \
+        .addGrid(lr.fitIntercept, [False, True]) \
+        .addGrid(lr.elasticNetParam, [0.0, 0.5, 1.0]) \
         .build()
 
     # We define an evaluation metric.
