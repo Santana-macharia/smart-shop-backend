@@ -23,8 +23,9 @@ def pipeline(request):
     json_df.to_json()
 
     # Cast all the columns to numeric
-
     new_df = data_df.select([col(c).cast("double").alias(c) for c in data_df.columns])
+    new_df = new_df.fillna(0.0)
+    new_df.show()
 
     # Split data into training and test sets
     train, test = new_df.randomSplit([0.7, 0.3])
@@ -32,9 +33,6 @@ def pipeline(request):
     # Feature Processing
     featuresCols = new_df.columns
     featuresCols.remove(unique_fields['prediction'])
-    featuresCols.remove('IsHoliday')
-    featuresCols.remove('Date')
-    featuresCols.remove('New_id')
 
     try:
         featuresCols.remove(date_column)
