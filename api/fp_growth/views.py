@@ -6,7 +6,7 @@ from pyspark.sql import  types as typ
 
 from api.common.mixins import read_df, custom_fields
 from api.common.spark_config import Spark
-
+from pyspark.ml.feature import CountVectorizer
 
 def cluster(request):
     unique_fields = custom_fields(request)
@@ -15,6 +15,11 @@ def cluster(request):
     data_df.cache()
     json_df = data_df.toPandas()
     json_df.to_json()
+
+    #transformer df to rdd
+    #td = data_df.rdd 
+
+    
 
     # Create a tuple of id and items from the Data Frame
     dd = []
@@ -30,12 +35,9 @@ def cluster(request):
             items.append(row[column])
         data.append((id, items))
 
-
-    # import pdb
-    # pdb.set_trace()
     # Create a Data Frame from the data dictionary
     final_data = Spark.sqlContext.createDataFrame(data, ["id", "items"])
-
+    
 
     # Create the FPGrowth instance with its arguments and train the model
     fpGrowth = FPGrowth(itemsCol='items', minSupport=0.5, minConfidence=0.6)
@@ -48,11 +50,9 @@ def cluster(request):
     assocRules = model.associationRules
 
     # Examines input items against all association rules and summarize consequents as prediction
-    prediction = model.transform(data)
+    prediction = model.transform(final_data)
 
-    import pdb
-    pdb.set_trace()
-
+   
     context = {
         'all_data': json_df,
         'itemSets': itemSets,
