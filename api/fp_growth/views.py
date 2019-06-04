@@ -50,14 +50,8 @@ def cluster(request):
     assocRules = model.associationRules
 
     # Examines input items against all association rules and summarize consequents as prediction
-<<<<<<< HEAD
-    prediction = model.transform(final_data)
-
-   
-=======
     prediction = model.transform(data)
 
->>>>>>> b1556b7eb63d5ebe67b661f2432420a4e9881dc8
     context = {
         'all_data': json_df,
         'itemSets': itemSets,

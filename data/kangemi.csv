@@ -1,0 +1,10 @@
+﻿ID,Gender,Temperature,Humidity,Age,Period,ReportedCases,LabConfirmed,ReportedDeaths,ConfirmedDeaths,OutbreakStatus
+1354778,Female,21,77,32,April,171,80,34,23,Yes
+1147438,Female,22,75,32,April,92,93,47,36,Yes
+1640031,Female,21.5,65,32,April,115,47,52,35,Yes
+1883350,Female,18,72,32,April,103,78,25,304,Yes
+1424119,Female,17,76,32,May,85,59,27,35,Yes
+1619297,Female,17.5,74,32,May,82,91,9,253,Yes
+1660149,Female,20,73,32,April,133,47,19,227,Yes
+1458769,Female,21.5,71,32,April,67,87,43,36,Yes
+1201647,Female,19,68,32,June,80,95,33,24,Yes
