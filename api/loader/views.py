@@ -1,5 +1,5 @@
 import json
-from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import render
 from rest_framework import generics
 from django.utils import timezone
@@ -319,6 +319,19 @@ def pre_process(request):
                 'clean_data': clean_json_df
     }
     return render(request, 'show_distinct.html', context)
+
+
+def clean_data(request):
+    data_df = read_df(request, 'clean')
+    data_df.cache()
+    columns = data_df.columns
+
+    result = {
+        "columns": columns,
+        "data": data_df.take(500)
+    }
+
+    return JsonResponse(result, safe=False)
 
 
 class MissingObservationsList(GetQuerysetMixin, generics.ListAPIView):
