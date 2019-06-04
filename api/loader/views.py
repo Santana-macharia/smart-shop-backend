@@ -326,9 +326,12 @@ def clean_data(request):
     data_df.cache()
     columns = data_df.columns
 
+    data = data_df.take(500)
+    data.insert(0, columns)
+
     result = {
         "columns": columns,
-        "data": data_df.take(500)
+        "data": data
     }
 
     return JsonResponse(result, safe=False)
