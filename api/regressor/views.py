@@ -13,6 +13,9 @@ from api.projects.models import CustomFields
 
 
 def pipeline(request):
+    company_name = request.user.project.company
+    table_name = str(company_name) + '_Prediction'
+
     unique_fields = custom_fields(request)
     date_column = CustomFields.objects.first()
     date_column = date_column.date_column
@@ -74,10 +77,19 @@ def pipeline(request):
     print("RMSE on our test set is: " + str(rmse))
 
     predictions.show()
+    new_predictions = predictions.withColumn("rawFeatures", predictions["rawFeatures"].cast("string"))
+    new_predictions = new_predictions.withColumn("features", predictions["features"].cast("string"))
+
+    # Save predicted data to DB
+    new_predictions.write.format('jdbc').options(
+        url='jdbc:mysql://localhost:3306/disease',
+        dbtable=table_name,
+        user='santana',
+        password='root').mode('append').save()
 
     predicted_df = predictions.toPandas()
     predicted_df.to_json()
-    # rmse = 23
+
     context = {
         'all_data': json_df,
         'rmse': rmse,
