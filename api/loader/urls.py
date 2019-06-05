@@ -10,7 +10,7 @@ urlpatterns = [
     # url(r'^missing_observations/$', show_missing_observations, name="missing_observations"),
 
     url(r'^pre_process/$', pre_process, name="full_pre_processing"),
-
+    url(r'^clean_data/$', clean_data, name="cleaned_data"),
     url(r'^rows/$', DistinctRowsList.as_view(), name='list_rows'),
     url(r'^ids/$', DistinctIdsList.as_view(), name='list_ids'),
     url(r'^missing/$', MissingObservationsList.as_view(), name='show_missing'),
