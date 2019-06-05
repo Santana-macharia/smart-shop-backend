@@ -16,6 +16,9 @@ def pipeline(request):
     unique_fields = custom_fields(request)
     date_column = CustomFields.objects.first()
     date_column = date_column.date_column
+   
+    company_name = request.user.project.company
+    table_name = str(company_name)+'_prediction'
 
     # First, read the data
     data_df = read_df(request, 'clean')
@@ -78,6 +81,13 @@ def pipeline(request):
     predicted_df = predictions.toPandas()
     predicted_df.to_json()
     # rmse = 23
+
+    predictions.write.format('jdbc').options(
+       url='jdbc:mysql://localhost:3306/disease?characterEncoding=UTF-8',
+       dbtable=table_name,
+       user='santana',
+       password='root').mode('append').save()
+
     context = {
         'all_data': json_df,
         'rmse': rmse,
