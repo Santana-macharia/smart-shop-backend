@@ -327,11 +327,18 @@ def clean_data(request):
     columns = data_df.columns
 
     data = data_df.take(500)
-    data.insert(0, columns)
+
+    list_data = []
+    for row in data:
+        row_dict = {}
+        for index,item in enumerate(row):
+            field = {columns[index]: item}
+            row_dict.update(field)
+        list_data.append(row_dict)
 
     result = {
         "columns": columns,
-        "data": data
+        "data": list_data
     }
 
     return JsonResponse(result, safe=False)
