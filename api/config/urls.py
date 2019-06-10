@@ -16,6 +16,7 @@ urlpatterns = [
     path(r'loader/', include('api.loader.urls', namespace='loader')),
     path(r'regressor/', include('api.regressor.urls', namespace='regressor')),
     path(r'cluster/', include('api.fp_growth.urls', namespace='cluster')),
+    
      #path(r'kmeans/', include('api.kmeans.urls', namespace='kmeans')),
     re_path(r'^auth/obtain_token/', obtain_jwt_token),
     re_path(r'^auth/refresh_token/', refresh_jwt_token),

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from pyspark.sql.functions import col
+from django.http import JsonResponse
 from pyspark.ml.feature import VectorAssembler, VectorIndexer
 from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
 from pyspark.ml.evaluation import RegressionEvaluator
@@ -99,3 +100,26 @@ def pipeline(request):
         'predicted': predicted_df
     }
     return render(request, 'show_predictions.html', context)
+ 
+ 
+def predicted(request):
+    show_df = read_df(request, 'predicted_df')
+    show_df.cache()
+    columns = show_df.columns
+
+    data = show_df.take(500)
+
+    list_data = []
+    for row in data:
+        row_dict = {}
+        for index,item in enumerate(row):
+            field = {columns[index]: item}
+            row_dict.update(field)
+        list_data.append(row_dict)
+
+    result = {
+        "columns": columns,
+        "data": list_data
+    }
+
+    return JsonResponse(result, safe=False)
