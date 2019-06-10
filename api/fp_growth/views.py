@@ -50,12 +50,13 @@ def cluster(request):
     assocRules = model.associationRules
 
     # Examines input items against all association rules and summarize consequents as prediction
-    prediction = model.transform(data)
-
+   # prediction = model.transform(data)
+    
+    
     context = {
         'all_data': json_df,
         'itemSets': itemSets,
         'assocRules': assocRules,
-        'predicted': prediction
+       # 'predicted': prediction
     }
     return render(request, 'show_clusters.html', context)

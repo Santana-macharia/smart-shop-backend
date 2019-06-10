@@ -4,7 +4,9 @@ from api.regressor.views import *
 app_name = 'regressor'
 
 urlpatterns = [
-    url(r'^predicted/$', predicted, name="predictions"),
+    
+    url(r'^predicted/$', predicted, name="predicted"),
+    
     url(r'^', pipeline, name="pipeline"),
     #url(r'^rmse/$', rmse, name="rmse"),
 #     url(r'^distinct_rows/$', show_distinct_rows, name="distinct_rows"),
