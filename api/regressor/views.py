@@ -103,7 +103,7 @@ def pipeline(request):
  
  
 def predicted(request):
-    show_df = read_df(request, 'predicted_df')
+    show_df = read_df(request, 'prediction')
     show_df.cache()
     columns = show_df.columns
 

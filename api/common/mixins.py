@@ -15,6 +15,8 @@ def read_df(self, db_type):
     project = self.user.project.company
     if db_type is 'clean':
         name = 'Clean'
+    elif db_type is 'prediction':
+        name = 'Prediction'
     else:
         name = 'Test'
     table_name = str(project)+'_'+name
