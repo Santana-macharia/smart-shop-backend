@@ -4,8 +4,8 @@ from api.regressor.views import *
 app_name = 'regressor'
 
 urlpatterns = [
+    url(r'^predicted/$', predicted, name="predictions"),
     url(r'^', pipeline, name="pipeline"),
-    url(r'^predicted/$', predicted , name="predictions"),
     #url(r'^rmse/$', rmse, name="rmse"),
 #     url(r'^distinct_rows/$', show_distinct_rows, name="distinct_rows"),
 #     url(r'^distinct_ids/$', show_distinct_ids, name="distinct_ids"),
