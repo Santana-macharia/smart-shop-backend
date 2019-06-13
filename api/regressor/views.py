@@ -14,8 +14,8 @@ from api.projects.models import CustomFields
 
 
 def pipeline(request):
-    company_name = request.user.project.company
-    table_name = str(company_name) + '_Prediction'
+   # company_name = request.user.project.company
+   # table_name = str(company_name) + '_Prediction'
 
     unique_fields = custom_fields(request)
     date_column = CustomFields.objects.first()
@@ -107,7 +107,7 @@ def predicted(request):
     show_df.cache()
     columns = show_df.columns
 
-    data = show_df.take(500)
+    data = show_df.take(1000)
 
     list_data = []
     for row in data:

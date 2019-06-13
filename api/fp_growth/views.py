@@ -3,6 +3,7 @@ from pyspark.ml.fpm import FPGrowth
 from pyspark.sql.functions import col, collect_list
 from pyspark.ml.feature import VectorAssembler, VectorIndexer
 from pyspark.sql import  types as typ
+from pyspark.sql import SparkSession
 
 from api.common.mixins import read_df, custom_fields
 from api.common.spark_config import Spark
@@ -10,16 +11,17 @@ from pyspark.ml.feature import CountVectorizer
 
 def cluster(request):
     unique_fields = custom_fields(request)
+
     # First, read the data
     data_df = read_df(request, 'clean')
-    data_df.cache()
+    data_df=data_df.cache()
     json_df = data_df.toPandas()
     json_df.to_json()
 
     #transformer df to rdd
     #td = data_df.rdd 
 
-    
+  
 
     # Create a tuple of id and items from the Data Frame
     dd = []
@@ -38,7 +40,9 @@ def cluster(request):
     # Create a Data Frame from the data dictionary
     final_data = Spark.sqlContext.createDataFrame(data, ["id", "items"])
     
-
+    final_data = final_data.cache()
+    #import pdb
+    #pdb.set_trace()
     # Create the FPGrowth instance with its arguments and train the model
     fpGrowth = FPGrowth(itemsCol='items', minSupport=0.5, minConfidence=0.6)
     model = fpGrowth.fit(final_data)
@@ -50,13 +54,13 @@ def cluster(request):
     assocRules = model.associationRules
 
     # Examines input items against all association rules and summarize consequents as prediction
-   # prediction = model.transform(data)
+    patterns = model.transform(final_data)
     
     
     context = {
         'all_data': json_df,
         'itemSets': itemSets,
         'assocRules': assocRules,
-       # 'predicted': prediction
+        'patterns': patterns
     }
     return render(request, 'show_clusters.html', context)
