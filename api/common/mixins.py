@@ -22,7 +22,7 @@ def read_df(self, db_type):
     table_name = str(project)+'_'+name
     data_df = Spark.sqlContext.read.format('jdbc') \
         .options(
-        url='jdbc:mysql://localhost:3306/disease',
+        url='jdbc:mysql://localhost:3306/smartshop',
         dbtable=table_name,
         # dbtable=(str(name+'Data')),
         useSSL=False,

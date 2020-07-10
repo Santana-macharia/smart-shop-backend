@@ -86,7 +86,7 @@ def pipeline(request):
 
     # Save predicted data to DB
     new_predictions.write.format('jdbc').options(
-        url='jdbc:mysql://localhost:3306/disease',
+        url='jdbc:mysql://localhost:3306/smartshop',
         dbtable=table_name,
         user='santana',
         password='root').mode('append').save()

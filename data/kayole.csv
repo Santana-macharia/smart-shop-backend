@@ -1,0 +1,25 @@
+periodid,dataname,Temperature,Humidity,Total
+201805,IDSR Typhoid Deaths,21,77,171
+201805,IDSR Typhoid Total,22,75,92
+201806,IDSR Typhoid Deaths,21.5,65,115
+201806,IDSR Typhoid Total,18,72,103
+201807,IDSR Typhoid Deaths,17,76,85
+201807,IDSR Typhoid Total,17.5,74,82
+201808,IDSR Typhoid Deaths,20,73,133
+201808,IDSR Typhoid Total,21.5,71,67
+201809,IDSR Typhoid Deaths,19,68,80
+201809,IDSR Typhoid Total,21,75,0
+201810,IDSR Typhoid Deaths,15,74,0
+201810,IDSR Typhoid Total,17,66,0
+201811,IDSR Typhoid Deaths,18.5,67,10
+201811,IDSR Typhoid Total,16,68,14
+201812,IDSR Typhoid Deaths,14,69,12
+201812,IDSR Typhoid Total,12,56,25
+201901,IDSR Typhoid Deaths,27,69,24
+201901,IDSR Typhoid Total,28.5,71,19
+201902,IDSR Typhoid Deaths,29,72,45
+201902,IDSR Typhoid Total,25,74,60
+201903,IDSR Typhoid Deaths,27.4,68,0
+201903,IDSR Typhoid Total,23,64,12
+201904,IDSR Typhoid Deaths,25,77,87
+201904,IDSR Typhoid Total,29,78,56

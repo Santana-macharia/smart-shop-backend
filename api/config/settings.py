@@ -115,7 +115,7 @@ CORS_ALLOW_HEADERS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'disease',
+        'NAME': 'smartshop',
         'USER':'santana',
         'PASSWORD':'root',
         'HOST':'localhost',

@@ -64,7 +64,7 @@ def import_data(request):
                 pass
 
         data_df.write.format('jdbc').options(
-            url='jdbc:mysql://localhost:3306/disease',
+            url='jdbc:mysql://localhost:3306/smartshop',
             dbtable=table_name,
             user='santana',
             password='root').mode('append').save()
@@ -304,7 +304,7 @@ def pre_process(request):
 
     # Final step is to save the pre_processed DF to the DB
     data_less_rows.write.format('jdbc').options(
-        url='jdbc:mysql://localhost:3306/disease',
+        url='jdbc:mysql://localhost:3306/smartshop',
         dbtable=table_name,
         user='santana',
         password='root').mode('append').save()
