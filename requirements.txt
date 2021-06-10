@@ -1,5 +1,5 @@
 django-jsonfield
-Django==2.1.5
+Django==2.2.24
 django-cors-headers==2.4.0
 django-filter==2.1.0
 django-rest-auth==0.9.3
